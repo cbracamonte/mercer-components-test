@@ -1,0 +1,193 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+
+*,
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.ng-star-inserted>br {
+  display: none;
+}
+
+.mos-c-breadcrumb .row {
+  margin: 0px !important;
+}
+
+.mos-c-breadcrumb-nav--active {
+  color: #ffffff !important;
+}
+
+.mos-c-breadcrumb-nav a {
+  color: #ffffffa3 !important;
+}
+
+.mos-c-button--outline {
+  font-weight: 600;
+}
+
+@import 'merceros-ui-core/scss/merceros-ui-core';
+@import 'merceros-ui-components/scss/components';
+@import '@mmctech/ngpd-merceros-ui-v3-cdk/scss/@mmctech/ngpd-merceros-ui-v3-cdk/fonts';
+@import '@mmctech/ngpd-merceros-ui-v3-cdk/scss/@mmctech/ngpd-merceros-ui-v3-cdk/mixins';
+@import '@mmctech/ngpd-merceros-ui-v3-cdk/scss/@mmctech/ngpd-merceros-ui-v3-cdk/grid';
+@import '@mmctech/ngpd-merceros-ui-v3-cdk/scss/@mmctech/ngpd-merceros-ui-v3-cdk/reset';
+
+
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/cdk/overlay-prebuilt.css';
+
+@include generate-grid();
+@include html-reset;
+
+.mos-c-dropdown {
+  max-width: 100% !important;
+}
+
+$mos-form-v2: true;
+
+@import 'merceros-ui-components/scss/brighter-migration';
+
+@include legacy-styles-using-wrapper();
+
+@include legacy-select-with-brighter-styles();
+@include legacy-datepicker-with-brighter-styles();
+
+@include brighter-typography();
+@include generate-spacer-classes();
+
+@include brighter-typography-v3();
+
+// helper to remove padding from row
+.row-collapse {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+// global font helper classes
+
+.dh4 {
+  font-family: 'MMC Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.dh5 {
+  font-family: 'MMC Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.0025em;
+}
+
+.dh6 {
+  font-family: 'MMC Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.dt1 {
+  font-family: 'MMC Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.0025em;
+}
+
+.dt3 {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+
+  letter-spacing: 0.0015em;
+}
+
+.mh6 {
+  font-family: 'MMC Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+
+  letter-spacing: 0.0015em;
+}
+
+.db1 {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  letter-spacing: 0.005em;
+}
+
+.db2 {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  letter-spacing: 0.005em;
+}
+
+
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  src: url("/brighter-assets/fonts/Noto Sans/NotoSans-Medium.ttf") format("truetype");
+}
+
+.brighter-header {
+  &__bar {
+
+    // pointer for header logo
+    &-title {
+      cursor: pointer;
+      max-width: 65%;
+    }
+  }
+}
+
+// footer overrides
+.brighter-footer {
+  .row {
+    max-width: initial;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .brighter-header__bar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around !important;
+  }
+}
+
+// another hack to fix the brighter accordion
+
+.brighter-accordion-item__header__content {
+  padding-left: 12px;
+}
+
+// hack to get brighter input to work with legacy
+
+brighter-control .brighter-control__input-wrapper input.brighter-input {
+  margin: 0;
+  border: unset;
+
+}

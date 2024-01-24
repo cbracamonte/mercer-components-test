@@ -24,13 +24,76 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "scss",
+                "node_modules",
+                "../scss",
+                "../node_modules"
+              ]
+            },
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "node_modules/merceros-ui-assets/mercer-assets",
+                "output": "/mercer-assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-monaco-editor/assets/monaco",
+                "output": "/assets/monaco/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/merceros-ui-components/assets",
+                "output": "/brighter-assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "../../node_modules/merceros-ui-assets/mercer-assets",
+                "output": "/mercer-assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "../../node_modules/ngx-monaco-editor/assets/monaco",
+                "output": "/assets/monaco/"
+              },
+              {
+                "glob": "**/*",
+                "input": "../../node_modules/merceros-ui-components/assets",
+                "output": "/brighter-assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@mmctech/ngpd-merceros-ui-v3-cdk/assets/logos",
+                "output": "halo-logos"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@mmctech/ngpd-merceros-ui-v3-cdk/assets/icons",
+                "output": "halo-icons"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@mmctech/ngpd-merceros-ui-v3-cdk/assets/docs",
+                "output": "halo-docs"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@mmctech/ngpd-merceros-ui-v3-cdk/assets/images",
+                "output": "halo-images"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects/ngpd-merceros-dna-datahub-fe/assets",
+                "output": "assets/datahub"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "src/styles/grid-custom.css"
             ],
             "scripts": []
           },
